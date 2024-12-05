@@ -9,6 +9,10 @@ while player_wins < 3 and computer_wins < 3:
 
     player_choice = input("Choose and write - rock, paper, or scissors?: \n").lower()
 
+    if player_choice not in ["rock", "paper", "scissors"]:
+        print("Invalid choice!")
+        continue # Go back to the start of the loop
+
     choices = ["rock", "paper", "scissors"]
 
     computer_choice = random.choice(choices)
